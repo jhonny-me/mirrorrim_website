@@ -17,8 +17,7 @@ export const help = async (args: string[]): Promise<string> => {
   return `Welcome! Here are all the available commands:
 \n${c}\n
 [tab]: trigger completion.
-[ctrl+l]/clear: clear terminal.\n
-Type 'sumfetch' to display summary.
+[ctrl+l]/clear: clear terminal.
 `;
 };
 
@@ -31,26 +30,24 @@ export const repo = async (args: string[]): Promise<string> => {
 // About
 export const about = async (args: string[]): Promise<string> => {
   return `Hi, I am ${config.name}. 
-Welcome to my website!
+Welcome to mirrorrim website!
 More about me:
-'sumfetch' - short summary.
-'resume' - my latest resume.
-'readme' - my github readme.`;
+'readme' - Mirrorrim readme.`;
 };
 
-export const resume = async (args: string[]): Promise<string> => {
-  window.open(`${config.resume_url}`);
-  return 'Opening resume...';
-};
+export const readme = async (args: string[]): Promise<string> => {
+  return `Mirrorrim
 
-// Donate
-export const donate = async (args: string[]): Promise<string> => {
-  return `thank you for your interest. 
-here are the ways you can support my work:
-- <u><a class="text-light-blue dark:text-dark-blue underline" href="${config.donate_urls.paypal}" target="_blank">paypal</a></u>
-- <u><a class="text-light-blue dark:text-dark-blue underline" href="${config.donate_urls.patreon}" target="_blank">patreon</a></u>
+<img width="275" alt="Cursor_and_Localizable_strings_—_outputs_en_lproj_—_multi-language-mobile" src="https://user-images.githubusercontent.com/9820374/158047850-fbc0b4b1-1d18-4c6b-962b-83084f66046f.png">
+Mirrorrim is a node app for generating iOS/Android localization files from local CSV or Remote Sheet.
+
+Consider Mirrorrim as a solution for maintainning multiple languages in iOS/Android platform btween developers and whoever updates the wordings.
 `;
 };
+
+export const demo = async (args: string[]): Promise<string> => {
+  return `<img src="/assets/images/demo.gif">`
+}
 
 // Contact
 export const email = async (args: string[]): Promise<string> => {
@@ -71,10 +68,6 @@ export const linkedin = async (args: string[]): Promise<string> => {
 };
 
 // Search
-export const google = async (args: string[]): Promise<string> => {
-  window.open(`https://google.com/search?q=${args.join(' ')}`);
-  return `Searching google for ${args.join(' ')}...`;
-};
 
 export const duckduckgo = async (args: string[]): Promise<string> => {
   window.open(`https://duckduckgo.com/?q=${args.join(' ')}`);
@@ -133,25 +126,20 @@ export const emacs = async (args?: string[]): Promise<string> => {
   return `you know what? just use vscode.`;
 };
 
-export const sudo = async (args?: string[]): Promise<string> => {
-  window.open('https://www.youtube.com/watch?v=dQw4w9WgXcQ', '_blank'); // ...I'm sorry
-  return `Permission denied: with little power comes... no responsibility? `;
-};
-
 // Banner
 export const banner = (args?: string[]): string => {
   return `
-█████        ███                       ███████████                                   
-░░███        ░░░                       ░█░░░███░░░█                                   
- ░███        ████  █████ █████  ██████ ░   ░███  ░   ██████  ████████  █████████████  
- ░███       ░░███ ░░███ ░░███  ███░░███    ░███     ███░░███░░███░░███░░███░░███░░███ 
- ░███        ░███  ░███  ░███ ░███████     ░███    ░███████  ░███ ░░░  ░███ ░███ ░███ 
- ░███      █ ░███  ░░███ ███  ░███░░░      ░███    ░███░░░   ░███      ░███ ░███ ░███ 
- ███████████ █████  ░░█████   ░░██████     █████   ░░██████  █████     █████░███ █████
-░░░░░░░░░░░ ░░░░░    ░░░░░     ░░░░░░     ░░░░░     ░░░░░░  ░░░░░     ░░░░░ ░░░ ░░░░░ 
+ ██████   ██████  ███                                                    ███  ██████   ██████
+░░██████ ██████  ░░░                                                    ░░░  ░░██████ ██████ 
+ ░███░█████░███  ████  ████████  ████████   ██████  ████████  ████████  ████  ░███░█████░███ 
+ ░███░░███ ░███ ░░███ ░░███░░███░░███░░███ ███░░███░░███░░███░░███░░███░░███  ░███░░███ ░███ 
+ ░███ ░░░  ░███  ░███  ░███ ░░░  ░███ ░░░ ░███ ░███ ░███ ░░░  ░███ ░░░  ░███  ░███ ░░░  ░███ 
+ ░███      ░███  ░███  ░███      ░███     ░███ ░███ ░███      ░███      ░███  ░███      ░███ 
+ █████     █████ █████ █████     █████    ░░██████  █████     █████     █████ █████     █████
+░░░░░     ░░░░░ ░░░░░ ░░░░░     ░░░░░      ░░░░░░  ░░░░░     ░░░░░     ░░░░░ ░░░░░     ░░░░░ 
+
 
 Type 'help' to see the list of available commands.
-Type 'sumfetch' to display summary.
 Type 'repo' or click <u><a class="text-light-blue dark:text-dark-blue underline" href="${config.repo}" target="_blank">here</a></u> for the Github repository.
 `;
 };
