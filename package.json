@@ -1,11 +1,11 @@
 {
-  "name": "liveterm",
+  "name": "Mirrorrim_website",
   "version": "0.1.0",
   "license": "MIT",
   "author": {
-    "name": "Vincent Wu",
-    "url": "https://cveinnt.com",
-    "email": "contact@wensenwu.com"
+    "name": "Johnny Gu",
+    "url": "https://github.com/jhonny-me",
+    "email": "guqiang180@gmail.com"
   },
   "scripts": {
     "dev": "next dev",
