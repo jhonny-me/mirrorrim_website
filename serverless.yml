@@ -1,24 +1,38 @@
+app: mirrorrim-website
+stage: dev
 
-component: http
+component: website
 name: mirrorrim-website
-app: my-nextjs-app-5c38c7d0
 
 inputs:
-  installDependency: true # 是否在线安装依赖
-  region: ap-shanghai # 云函数所在区域
   src:
-    dist: ./
-    hook: npm run build
-    exclude:
-      - .env
-      - "node_modules/**"
-  faas:
-    runtime: Nodejs12.16
-    framework: nextjs
-    name: ${name}
-    timeout: 10 # 超时时间，单位秒
-    memorySize: 512 # 内存大小，默认 512 MB
-  apigw:
-    protocols:
-      - http
-      - https
+    src: ./out
+    index: index.html
+    error: index.html
+  region: ap-guangzhou
+  bucket: website-demo
+  protocol: https
+
+# component: http
+# name: mirrorrim-website
+# app: my-nextjs-app-5c38c7d0
+
+# inputs:
+#   installDependency: true # 是否在线安装依赖
+#   region: ap-shanghai # 云函数所在区域
+#   src:
+#     dist: ./
+#     hook: npm run build
+#     exclude:
+#       - .env
+#       - "node_modules/**"
+#   faas:
+#     runtime: Nodejs12.16
+#     framework: nextjs
+#     name: ${name}
+#     timeout: 10 # 超时时间，单位秒
+#     memorySize: 512 # 内存大小，默认 512 MB
+#   apigw:
+#     protocols:
+#       - http
+#       - https
