@@ -8,7 +8,7 @@ inputs:
   src:
     src: ./out
     index: index.html
-    error: index.html
+    error: 404.html
   region: ap-guangzhou
   bucket: website-demo
   protocol: https
