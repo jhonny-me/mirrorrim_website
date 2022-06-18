@@ -9,7 +9,7 @@ inputs:
     src: ./out
     index: index.html
     error: 404.html
-  region: ap-guangzhou
+  region: ap-shanghai
   bucket: website-demo
   protocol: https
 
