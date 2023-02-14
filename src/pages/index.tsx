@@ -58,6 +58,7 @@ const IndexPage: React.FC<IndexPageProps> = ({ inputRef }) => {
           />
         </div>
       </div>
+      <a href="https://beian.miit.gov.cn/" target="_blank" rel="noreferrer">沪ICP备2022018177号-1</a>
     </>
   );
 };
